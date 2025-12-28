@@ -1,0 +1,45 @@
+{
+  "name": "jasper_nodejs",
+  "version": "1.0.45",
+  "description": "wrapper jasper report untuk nodejs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format esm --dts && cp -r src/jasper dist/jasper && chmod +x dist/jasper/bin/jasper"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anggadedysaputro/jasper_nodejs.git"
+  },
+  "keywords": [
+    "jasper",
+    "report",
+    "jasper",
+    "nodejs",
+    "jasper",
+    "javascript"
+  ],
+  "author": "angga dedy saputro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anggadedysaputro/jasper_nodejs/issues"
+  },
+  "homepage": "https://github.com/anggadedysaputro/jasper_nodejs#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
+}
